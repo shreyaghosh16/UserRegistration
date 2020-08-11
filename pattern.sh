@@ -53,7 +53,7 @@ fi
 read -p "Enter Password to check " password
 pattern=$(($(tr -d '[[:alnum:]]' <<< $password | wc -m)-1))
 
-if [[ ${#password} -ge 8 && $password==*[[:upper:]]*  ]]
+if [[ ${#password} -ge 8 && $password==*[[:upper:]]* && $password == *[0-9]*  ]]
 then
     echo "Valid"
 else
