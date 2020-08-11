@@ -46,3 +46,16 @@ then
 else
    echo "Mobile no is Wrong "
 fi
+
+
+#UC-5 validating password
+
+read -p "Enter Password to check " password
+pattern=$(($(tr -d '[[:alnum:]]' <<< $password | wc -m)-1))
+
+if [[ ${#password} -ge 8  ]]
+then
+    echo "Valid"
+else
+    echo "Invalid"
+fi
