@@ -59,3 +59,5 @@ then
 else
     echo "Invalid"
 fi
+
+#Checking All Email samples provided
