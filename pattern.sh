@@ -13,6 +13,7 @@ else
    echo "FirstName is Incorrect"
 fi
 
+
 #UC-2 validating Last Name
 
 pattern="^[[:upper:]]{1,}[[:lower:]]{2,}$"
@@ -22,4 +23,15 @@ then
    echo "LastName is Correct"
 else
    echo "LastName is Incorrect"
+fi
+
+#UC-3 validating Email
+
+pattern1="^[a-zA-Z0-9]{3,15}(|[.|_|%|+|-]?[a-zA-Z0-9]+)@[a-zA-Z0-9]{1,15}(.[a-z]{2,4})(|[.]?[a-z]{2,4})$"
+read -p "Enter Email to check " email
+if [[ $email =~ $pattern1 ]]
+then
+   echo " Email is Correct"
+else
+   echo "Email is Incorrect"
 fi
